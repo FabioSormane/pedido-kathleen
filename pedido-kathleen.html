@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#52615a">
+  <meta name="description" content="Um pedido de desculpas para Kathleen.">
+  <title>Para Kathleen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #263c50;
+      background: #52615a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: #52615a;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0;
+      padding: 0;
+      background-color: #52615a;
+      background-image:
+        radial-gradient(ellipse at 16% 18%, rgba(241, 227, 190, 0.16), transparent 36%),
+        radial-gradient(ellipse at 82% 78%, rgba(25, 43, 38, 0.22), transparent 42%),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 7px);
+    }
+
+    main {
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      max-width: 500px;
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0 auto;
+      padding: max(49px, env(safe-area-inset-top)) 22px max(38px, env(safe-area-inset-bottom)) 57px;
+      overflow: hidden;
+      background-color: #f3ead4;
+      background-image:
+        linear-gradient(90deg, transparent 0 39px, rgba(194, 91, 79, 0.43) 40px 41px, transparent 42px),
+        repeating-linear-gradient(180deg, transparent 0 30px, rgba(91, 139, 163, 0.18) 31px 32px, transparent 33px 34px),
+        radial-gradient(ellipse at 15% 8%, rgba(255, 255, 255, 0.5), transparent 48%);
+      box-shadow: 0 0 34px rgba(18, 31, 27, 0.24);
+    }
+
+    main::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.2;
+      background-image: repeating-linear-gradient(0deg, transparent 0 3px, rgba(116, 91, 57, 0.1) 4px, transparent 5px 8px);
+    }
+
+    .tape-top {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      width: 116px;
+      height: 25px;
+      transform: translateX(-50%) rotate(-2deg);
+      background: rgba(218, 190, 128, 0.75);
+      border-left: 1px dashed rgba(130, 104, 61, 0.2);
+      border-right: 1px dashed rgba(130, 104, 61, 0.2);
+      opacity: 0.9;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      max-width: 390px;
+      margin: 20px 0 12px;
+      color: #243b50;
+      font-family: "Permanent Marker", "Trebuchet MS", sans-serif;
+      font-size: clamp(2.1rem, 9.4vw, 3.05rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.055em;
+      text-align: left;
+      text-wrap: balance;
+      transform: rotate(-1deg);
+    }
+
+    h1 span {
+      display: block;
+    }
+
+    .subtitle {
+      display: table;
+      max-width: 100%;
+      margin: 17px 0 23px -4px;
+      padding: 1px 8px 5px;
+      color: #9e413b;
+      background: rgba(235, 205, 125, 0.66);
+      font-family: "Caveat", "Comic Sans MS", cursive;
+      font-size: clamp(1.8rem, 7.6vw, 2.35rem);
+      font-weight: 700;
+      line-height: 1.03;
+      text-align: left;
+      transform: rotate(1.2deg);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 23px 14px;
+      width: 100%;
+      padding: 5px 2px 12px;
+    }
+
+    .photo {
+      position: relative;
+      min-width: 0;
+      margin: 0;
+      padding: 7px 7px 8px;
+      background: #fffdf6;
+      border: 1px solid rgba(93, 79, 60, 0.18);
+      box-shadow: 2px 4px 7px rgba(61, 53, 39, 0.22);
+    }
+
+    .photo::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: -9px;
+      left: 50%;
+      width: 48px;
+      height: 17px;
+      transform: translateX(-50%) rotate(-4deg);
+      background: rgba(211, 190, 137, 0.72);
+      border-left: 1px solid rgba(139, 117, 70, 0.16);
+      border-right: 1px solid rgba(139, 117, 70, 0.16);
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 0.88 / 1;
+      object-fit: cover;
+      object-position: center 25%;
+      background: #d9d0c1;
+    }
+
+    .photo:nth-child(1) {
+      transform: rotate(-3.2deg);
+    }
+
+    .photo:nth-child(2) {
+      margin-top: 11px;
+      transform: rotate(2.8deg);
+    }
+
+    .photo:nth-child(3) {
+      margin-top: -5px;
+      transform: rotate(2.2deg);
+    }
+
+    .photo:nth-child(4) {
+      margin-top: 7px;
+      transform: rotate(-2.5deg);
+    }
+
+    @media (max-width: 360px) {
+      main {
+        padding-right: 17px;
+        padding-left: 51px;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 9vw, 2.2rem);
+      }
+
+      .gallery {
+        column-gap: 10px;
+        row-gap: 19px;
+      }
+    }
+
+    @media (min-width: 600px) {
+      main {
+        min-height: calc(100svh - 48px);
+        margin-block: 24px;
+        padding-top: 62px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="tape-top" aria-hidden="true"></div>
+    <div class="content">
+      <h1>
+        <span>KATHLEEN,</span>
+        <span>ME DESCULPA</span>
+        <span>POR TE DAR</span>
+        <span>VACUO</span>
+      </h1>
+
+      <p class="subtitle">coreanos gostosos pra tee deixar feliz</p>
+
+      <section class="gallery" aria-label="Fotos de artistas masculinos de K-pop">
+        <figure class="photo">
+          <img src="https://t1.daumcdn.net/news/202301/26/starnews/20230126091625394uhha.jpg" alt="V, integrante do BTS" referrerpolicy="no-referrer" fetchpriority="high">
+        </figure>
+        <figure class="photo">
+          <img src="https://cf.asiaartistawards.com/news/21/2022/01/2022011107104374742_3.jpg" alt="Jung Kook, integrante do BTS" referrerpolicy="no-referrer" fetchpriority="high">
+        </figure>
+        <figure class="photo">
+          <img src="https://image.idntimes.com/post/20211130/collagemaker-20211201-022915142-dbe06ff4c910c39295673ca828a87fac-7a364e8d46b87f90d711f924336a47d1.png" alt="Hyunjin, integrante do Stray Kids" referrerpolicy="no-referrer" loading="lazy">
+        </figure>
+        <figure class="photo">
+          <img src="https://lastfm.freetls.fastly.net/i/u/ar0/e38558c3c69e32ba5708277da3c62dad.jpg" alt="Jimin, integrante do BTS" referrerpolicy="no-referrer" loading="lazy">
+        </figure>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
